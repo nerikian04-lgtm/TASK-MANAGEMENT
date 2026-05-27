@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DigiDesk Form</title>
+    <link rel="stylesheet" th:href="@{/css/form.css}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="form-header">
+            <h3>DigiDesk Support Form</h3>
+            <p>Fill out the form below and our team will help you fix your issue shortly.</p>
+        </div>
+
+        <form id="complaint-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" placeholder="First Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" placeholder="Last Name"> 
+                </div>
+            </div> 
+            
+            <div class="form-group">
+                <label for="emailaddress">Email Address</label>
+                <input type="text" id="emailaddress" placeholder="Email Address">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="tickettype">Type of Ticket</label>
+                    <select id="tickettype">
+                        <option value="Request">Request</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="urgency">Urgency</label>
+                    <select id="urgency">
+                        <option value="Low">Low Priority</option>
+                        <option value="High">High Priority</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="itpersonnel">Assigned Staff</label>
+                    <select id="itpersonnel">
+                        <option value="Support Desk">Support Desk (General Help & Logins)</option>
+                        <option value="Network Admin">Network Admin (Wi-Fi & Internet)</option>
+                        <option value="Hardware Tech">Hardware Tech (PC & Device Repairs)</option>
+                        <option value="System Analyst">System Analyst (Software Bugs)</option>
+                        <option value="System Analyst">Data Analyst (Data Bugs)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="issue">What is the problem?</label>
+                    <select id="issue" onchange="toggleCustomIssue()">
+                        <option value="Account Locked Out">Account Locked Out</option>
+                        <option value="Wi-Fi Not Connecting">Server Downtime</option>
+                        <option value="Data loss">Data loss</option>
+                        <option value="Software Compatibility">Software Compatibility</option>
+                        <option value="Hacked Account">Hacked account</option>
+                        <option value="Others">Others (Describe your situation)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group" id="custom-issue-group">
+                <label for="customissue">Describe your situation</label>
+                <textarea id="customissue" rows="3" placeholder="Please provide more details about your technical problem..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="attachfile">Upload Screenshot (Optional)</label>
+                <input type="file" id="attachfile">
+            </div>
+
+            <button type="button" class="submit-btn" onclick="submitTicket()">Submit Form</button>
+        </form>
+    </div>
+
+    <script th:src="@{/js/form.js}" defer></script>
+
+</body>
+
+</html>

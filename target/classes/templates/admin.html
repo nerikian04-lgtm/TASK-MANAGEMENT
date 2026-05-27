@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" th:href="@{/css/kale.css}">
+    <link rel="stylesheet" th:href="@{/css/history.css}">
+    <link rel="stylesheet" th:href="@{/css/request.css}">
+
+    <title>Admin Page</title>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav">
+    <div class="logo">DIGI-desk</div>
+
+    <div class="nav-right">
+        <div class="profile">
+            <span>Hello, <span th:text="${name}"></span></span>
+        </div>
+
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+    </div>
+</nav>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+
+    <div class="close-btn" id="close-btn">✕</div>
+
+    <div class="sidebar-links">
+        <a href="/admin">Home</a>
+        <a href="/admin/about">About</a>  
+        <a href="/admin/service">Services</a>
+    </div>
+
+    <div class="sidebar-bottom">
+        <a href="/logout">
+            <button class="btn" type="button">Logout</button>
+        </a>
+    </div>
+
+</div>
+
+<!-- HEADER -->
+<div class="box">
+    <h1>Welcome, <span th:text="${name}"></span></h1>
+    <p>This is the <span>admin</span> page</p>
+</div>
+
+<!-- TABS -->
+<ul class="tab-menu">
+    <li><button class="tab-menu__button is-active">HISTORY</button></li>
+    <li><button class="tab-menu__button">REQUEST</button></li>
+
+</ul>
+
+<!-- PANELS -->
+<section class="tab-panel is-active">
+    <div th:replace="task_history :: content"></div>
+</section>
+
+<section class="tab-panel">
+    <div th:replace="task_request :: content"></div>
+</section>
+
+
+<!-- JS -->
+<script th:src="@{/js/javarice.js}" defer></script>
+
+</body>
+</html>

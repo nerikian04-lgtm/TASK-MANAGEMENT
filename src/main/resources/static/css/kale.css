@@ -1,0 +1,265 @@
+/* ================= BASE RESET ================= */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    background-color: white !important;
+
+    background-image:
+        linear-gradient(to right, #ccc 1px, transparent 1px),
+        linear-gradient(to bottom, #ccc 1px, transparent 1px) !important;
+
+    background-size: 50px 50px;
+}
+
+/* ================= NAVBAR ================= */
+.nav {
+    width: 100%;
+    padding: 1rem 2rem;
+
+    box-sizing: border-box;
+
+    background: black;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile {
+    color: white;
+}
+
+.menu-toggle {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+
+    width: 300px;
+    height: 100vh;
+
+    background: rgba(30, 30, 30, 0.98);
+    color: white;
+
+    transition: right 0.4s ease;
+
+    z-index: 9999;
+}
+
+.sidebar.active {
+    right: 0 !important;
+}
+
+.close-btn {
+    font-size: 28px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sidebar-links a {
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+}
+
+.sidebar-links a:hover {
+    background: plum;
+    color: black;
+}
+
+.sidebar-bottom {
+    position: absolute;
+    bottom: 20px;
+
+    width: 100%;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+.sidebar-bottom .btn {
+    width: 100%;
+
+    padding: 12px;
+
+    background: plum;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    border-radius: 10px;
+}
+
+/* ================= HEADER ================= */
+.box {
+    padding: 30px;
+}
+
+.box h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 20px;
+}
+
+/* ================= TAB MENU ================= */
+.tab-menu {
+    display: flex;
+    gap: 14px;
+
+    list-style: none;
+
+    margin: 0 40px;
+    padding: 0;
+
+    position: relative;
+    top: 2px;
+
+    z-index: 5;
+}
+
+.tab-menu li {
+    margin: 0;
+}
+
+/* TAB BUTTON */
+.tab-menu__button {
+    padding: 18px 50px;
+
+    background: #eee;
+
+    border: 2px solid black;
+    border-bottom: none;
+
+    cursor: pointer;
+
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+/* ACTIVE TAB */
+.tab-menu__button.is-active {
+    background: black;
+    color: white;
+}
+
+/* ================= TAB PANEL ================= */
+.tab-panel {
+    display: none !important;
+
+    margin: 0 40px 40px;
+
+    background: white;
+
+    border: 2px solid black;
+
+    min-height: 600px;
+
+    padding: 40px;
+
+    box-sizing: border-box;
+
+    position: relative;
+    top: -2px;
+
+    z-index: 1;
+}
+
+.tab-panel.is-active {
+    display: block !important;
+}
+
+/* ================= INNER CONTAINER ================= */
+.container {
+    width: 80%;
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    background: white;
+
+    border: 3px solid #ccc;
+    border-radius: 25px;
+
+    padding: 40px;
+
+    box-sizing: border-box;
+}
+
+/* ================= TABLE ================= */
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: white;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+
+    padding: 14px;
+
+    text-align: center;
+}
+
+th {
+    background: #eee;
+
+    font-size: 18px;
+}
+
+/* ================= PRIORITY LABELS ================= */
+.high-priority {
+    color: red;
+    font-weight: bold;
+}
+
+.low-priority {
+    color: green;
+    font-weight: bold;
+}
+

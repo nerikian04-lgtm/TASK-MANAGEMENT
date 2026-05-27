@@ -1,0 +1,19 @@
+.high-priority {
+    color: red;
+    font-weight: bold;
+}
+
+.low-priority {
+    color: green;
+    font-weight: bold;
+}
+
+.delete-btn {
+    color: gray;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.delete-btn:hover {
+    color: red;
+}

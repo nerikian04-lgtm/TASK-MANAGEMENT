@@ -1,0 +1,9 @@
+.high-priority {
+    color: red;
+    font-weight: bold;
+}
+
+.low-priority {
+    color: green;
+    font-weight: bold;
+}

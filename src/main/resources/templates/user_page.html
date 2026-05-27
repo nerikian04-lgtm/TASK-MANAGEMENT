@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" th:href="@{/css/user.css}">
+
+    <title>User Page</title>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav">
+    <div class="logo">DIGI-desk</div>
+
+    <div class="nav-right">
+        <div class="profile">
+            <span>Hello, <span class="name"th:text="${name}"></span></span>
+        </div>
+
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+    </div>
+</nav>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+
+    <div class="close-btn" id="close-btn">✕</div>
+
+    <div class="sidebar-links">
+        <a href="/user/page">Home</a>
+        <a href="/user/about">About</a>
+        <a href="/user/user-service">Services</a>
+        <a href="#">Manage Account</a>
+    </div>
+
+    <div class="sidebar-bottom">
+        <a href="/logout">
+            <button class="btn" type="button">Logout</button>
+        </a>
+    </div>
+
+</div>
+
+<!-- HEADER -->
+<div class="box">
+    <h1>Welcome, <span class="name" th:text="${name}"></span></h1>
+    <p>This is the <span class="name">user</span> page</p>
+</div>
+<div>
+    <button class="help-btn">
+        HELP DESK
+    </button>
+    <a href="/user/form">
+        <button class="req-btn" type="button">
+            REQUEST
+        </button>
+    </a>
+</div>
+
+
+<!-- JS -->
+<script th:src="@{/js/javarice.js}" defer></script>
+
+</body>
+</html>
